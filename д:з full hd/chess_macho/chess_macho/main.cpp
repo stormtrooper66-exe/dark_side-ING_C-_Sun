@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 using namespace std;
 int main(int argc, const char * argv[])
 {
@@ -31,7 +32,10 @@ int main(int argc, const char * argv[])
     */
    
         int x1, x2, y1, y2;
-        cin >> x1 >> x2 >> y1 >> y2;
+        cin >> x1;
+        cin >> x2;
+        cin >> y1;
+        cin >> y2;
         if (abs(x1-y1)==5 && abs(x2-y2)==2)
     {
         cout << "YES";
