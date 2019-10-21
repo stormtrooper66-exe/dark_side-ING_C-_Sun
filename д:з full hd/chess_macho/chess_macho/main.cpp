@@ -2,6 +2,8 @@
 using namespace std;
 int main(int argc, const char * argv[])
 {
+    /*
+     версия курильщика 
     int vector_1;
     int vector_2;
     int x_1;
@@ -25,6 +27,22 @@ int main(int argc, const char * argv[])
     else
     {
         cout << "NO no"<<endl;
+    }
+    */
+   
+        int x1, x2, y1, y2;
+        cin >> x1 >> x2 >> y1 >> y2;
+        if (abs(x1-y1)==5 && abs(x2-y2)==2)
+    {
+        cout << "YES";
+    }
+        if   (abs(x1-y1)==2 && abs(x2-y2)==5)
+    {
+             cout << "YES";
+    }
+        else
+    {
+        cout << "NO";
     }
     return 0;
 }

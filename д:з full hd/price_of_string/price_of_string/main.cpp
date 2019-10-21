@@ -1,7 +1,9 @@
 #include <cstring>
 #include <iostream>
 #include <string>
+#include <clocale>
 #include <deque>
+#include <vector>
 using namespace std;
 int utf8_to_unicode(deque<int> &coded)
 {
@@ -32,12 +34,22 @@ int utf8_to_unicode(deque<int> &coded)
 }
 int main ()
 {
-   string str;
-   getline(cin,str);
-   int colvo = str.size();
-   double money = (colvo * 0.23f);
-   cout << money << endl ;
+    string str;
+    getline(cin,str);
+    vector<char> data(str.begin(), str.end());
+    copy(str.begin(), str.end(), back_inserter(data));
+    int colvo = data.size();
+    double money = (colvo * 0.23f);
+    cout << money << endl ;
+    return 0;
 
-    
 }
+/*string old_string;
+  getline(cin,old_string);
+  int colvo = old_string.size();
+  int new_string = utf8_to_unicode(old_string);
+  double money = (colvo * 0.23f);
+  cout << money << endl ;
 
+
+*/
